@@ -41,12 +41,13 @@ export default function Pagelayout({ children }) {
     >
       {/* HEADER / NAVBAR */}
       <Box
-        h="10vh"
+        h="8vh"
         w="100%"
         bg="#2f3030"
         color="white"
-        position="relative"
-        zIndex={10}
+        position="fixed"
+        top="0"
+        left="0"
       >
         <HStack
           h="100%"
