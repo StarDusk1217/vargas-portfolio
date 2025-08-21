@@ -1,16 +1,25 @@
 import React from "react";
 import Pagelayout from "@/components/Pagelayout";
 import Footer from "@/components/Footer";
-import { Box, Flex, Text, HStack, VStack, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  HStack,
+  VStack,
+  Image,
+  SimpleGrid,
+} from "@chakra-ui/react";
 
 function IndexPage() {
   return (
     <Pagelayout>
+      {/* ===== HERO / INTRO SECTION ===== */}
       <Flex
         w="100%"
         h="100%"
         mx="auto"
-        flexDirection={{ base: "column", md: "row" }} // column on mobile, row on md+
+        flexDirection={{ base: "column", md: "row" }}
         py={{ base: 10, md: 20 }}
         px={{ base: 4, sm: 8, md: 16, lg: 32 }}
         align="center"
@@ -22,7 +31,7 @@ function IndexPage() {
           w={{ base: "100%", md: "60%", lg: "700px" }}
           align="flex-start"
           spacing={6}
-          mb={{ base: 10, md: 0 }} // add spacing below on mobile
+          mb={{ base: 10, md: 0 }}
         >
           <Text
             fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
@@ -75,6 +84,86 @@ function IndexPage() {
           boxShadow="dark-lg"
         />
       </Flex>
+
+      {/* ===== SKILLS SECTION ===== */}
+      <Box
+        w="100%"
+        py={{ base: 10, md: 16 }}
+        px={{ base: 4, sm: 8, md: 16, lg: 32 }} // ✅ match intro section padding
+      >
+        <Text
+          fontSize={{ base: "2xl", md: "3xl" }}
+          fontWeight="bold"
+          textAlign="left"
+          mb={10}
+          color="#1E90FF"
+        >
+          Skills & Tools
+        </Text>
+
+        <SimpleGrid
+          columns={{ base: 1, sm: 1, md: 2 }} // ✅ 1 column on small, 2 on md+
+          spacing={{ base: 6, md: 8, lg: 10 }} // ✅ spacing adjusts by screen size
+        >
+          {/* Primary Skills */}
+          <Box
+            p={{ base: 4, sm: 5, md: 6 }} // ✅ padding adjusts by screen size
+            borderWidth="1px"
+            borderRadius="lg"
+            boxShadow="md"
+            textAlign="left"
+            _hover={{ boxShadow: "xl", transform: "scale(1.02)" }}
+            transition="all 0.3s ease"
+          >
+            <Text
+              fontSize={{ base: "lg", md: "xl" }}
+              fontWeight="bold"
+              mb={3}
+              color="gray.800"
+            >
+              Primary Skills
+            </Text>
+            <Text
+              fontSize={{ base: "sm", md: "md" }}
+              color="gray.600"
+              lineHeight="1.8"
+            >
+              JavaScript, HTML, CSS, React.js, Node.js, Express.js, MongoDB,
+              Git, GitHub, Trello, Figma, VS Code, Database Management
+            </Text>
+          </Box>
+
+          {/* Secondary Skills */}
+          <Box
+            p={{ base: 4, sm: 5, md: 6 }}
+            borderWidth="1px"
+            borderRadius="lg"
+            boxShadow="md"
+            textAlign="left"
+            _hover={{ boxShadow: "xl", transform: "scale(1.02)" }}
+            transition="all 0.3s ease"
+          >
+            <Text
+              fontSize={{ base: "lg", md: "xl" }}
+              fontWeight="bold"
+              mb={3}
+              color="gray.800"
+            >
+              Secondary Skills
+            </Text>
+            <Text
+              fontSize={{ base: "sm", md: "md" }}
+              color="gray.600"
+              lineHeight="1.8"
+            >
+              C#, Python, PHP, Visual Studio, Android Studio, PyCharm, Flutter,
+              MSSQL, MySQL, ASP.NET, .NET Core, Postman, Microsoft Office
+              (Excel, PowerPoint), System Design (ERD, Use Case Diagrams,
+              Flowcharts, DFD)
+            </Text>
+          </Box>
+        </SimpleGrid>
+      </Box>
     </Pagelayout>
   );
 }
