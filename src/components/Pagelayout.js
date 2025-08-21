@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons"; // Chakra's hamburger icon
 import { useRouter } from "next/router";
+import Footer from "@/components/Footer";
 
 export default function Pagelayout({ children }) {
   const router = useRouter();
@@ -151,6 +152,7 @@ export default function Pagelayout({ children }) {
       >
         {children}
       </VStack>
+      <Footer />
     </Flex>
   );
 }

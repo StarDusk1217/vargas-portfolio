@@ -1,5 +1,6 @@
 import React from "react";
 import Pagelayout from "@/components/Pagelayout";
+import Footer from "@/components/Footer";
 import { Box, Flex, Text, HStack, VStack, Image } from "@chakra-ui/react";
 
 function IndexPage() {
