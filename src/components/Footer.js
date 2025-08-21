@@ -7,8 +7,9 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
+  Tooltip,
 } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 import { ReactNode } from "react";
 import { useRouter } from "next/router";
 
@@ -64,28 +65,46 @@ export default function Footer() {
             © {new Date().getFullYear()} Allen Vargas. All rights reserved.{" "}
           </Text>{" "}
           <Stack direction={"row"} spacing={6}>
-            {" "}
-            <SocialButton
-              label={"GitHub"}
-              href={"https://github.com/StarDusk1217"}
-            >
-              {" "}
-              <FaGithub />{" "}
-            </SocialButton>{" "}
-            <SocialButton
-              label={"LinkedIn"}
-              href={"https://linkedin.com/in/yourprofile"}
-            >
-              {" "}
-              <FaLinkedin />{" "}
-            </SocialButton>{" "}
-            <SocialButton
-              label={"Email"}
-              href={"mailto:starmiguel17@gmail.com"}
-            >
-              {" "}
-              <FaEnvelope />{" "}
-            </SocialButton>{" "}
+            <Tooltip label="github.com/StarDusk1217" hasArrow>
+              <span>
+                {" "}
+                <SocialButton
+                  label={"GitHub"}
+                  href={"https://github.com/StarDusk1217"}
+                >
+                  {" "}
+                  <FaGithub />{" "}
+                </SocialButton>{" "}
+              </span>
+            </Tooltip>
+            <Tooltip label="linkedin.com/in/allen-miguel-vargas/" hasArrow>
+              <span>
+                <SocialButton
+                  label={"LinkedIn"}
+                  href={"https://www.linkedin.com/in/allen-miguel-vargas/"}
+                >
+                  {" "}
+                  <FaLinkedin />{" "}
+                </SocialButton>{" "}
+              </span>
+            </Tooltip>
+            <Tooltip label="starmiguel17@gmail.com" hasArrow>
+              <span>
+                <SocialButton
+                  label={"Email"}
+                  href={"mailto:starmiguel17@gmail.com"}
+                >
+                  <FaEnvelope />
+                </SocialButton>
+              </span>
+            </Tooltip>
+            <Tooltip label="+63 945 456 4096" hasArrow>
+              <span>
+                <SocialButton label={"Phone"} href={"tel:+639123456789"}>
+                  <FaPhone />
+                </SocialButton>
+              </span>
+            </Tooltip>
           </Stack>{" "}
         </Container>{" "}
       </Box>{" "}
