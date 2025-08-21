@@ -41,7 +41,7 @@ export default function Pagelayout({ children }) {
     >
       {/* HEADER / NAVBAR */}
       <Box
-        h="8vh"
+        h="7vh"
         w="100%"
         bg="#2f3030"
         color="white"
